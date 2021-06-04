@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Argonautes{% endblock %}
+
+{% block body %}
+
+<div class=" mt-5 mb-5">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="mt-2 mb-2">Ajouter un(e) Argonaute</h2>
+
+            {{ form(form) }}
+
+            <div class="mt-2">
+                <h2 class="mb-2">Membres d'équipage :</h2>
+            </div>
+        </div>
+    </div>
+    <div class="ml-3 " id="listeEquipage">
+        {% for membre in membres %}
+
+        <p>{{ membre.nom }}</p>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
